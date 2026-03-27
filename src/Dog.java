@@ -14,11 +14,23 @@ public class Dog extends Animal{
         this.tailShape = tailShape;
     }
 
+    public void makeNoise(){
+        if (type == "wolf"){
+            System.out.println("wo ooooow");
+        }else {
+            bark();
+        }
+    }
+
     @Override
     public String toString() {
         return "Dog{" +
                 "earShape='" + earShape + '\'' +
                 ", tailShape='" + tailShape + '\'' +
                 "} " + super.toString();
+    }
+
+    public void bark(){
+        System.out.println("Woof");
     }
 }
